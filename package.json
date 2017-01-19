@@ -1,0 +1,20 @@
+{
+  "name": "serverless-coffeescript",
+  "version": "1.0.0",
+  "description": "plugin for serverless to compile coffee-script files into javascript",
+  "main": "index.js",
+  "scripts": {
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "coffee-script": "1.12.2",
+    "archiver": "^1.2.0",
+    "bluebird": "^3.4.6",
+    "glob-all": "^3.1.0",
+    "lodash": "^4.17.2",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.5.4",
+    "unzip2": "^0.2.5"
+  }
+}
