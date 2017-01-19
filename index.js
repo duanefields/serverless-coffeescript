@@ -41,14 +41,13 @@ class ServerlessPlugin {
         const options = {
           cwd: path.join(servicePath, '.serverless'),
         };
-        const result = spawnSync(path.join(__dirname, '..', '.bin/coffee'), args, options);
-        const stdout = result.stdout;
-        const sterr = result.stderr;
-        if (stdout) {
-          this.serverless.cli.log(`Coffee compilation:\n${stdout.toString()}`);
-        }
+        var pathToCoffee = path.join(__dirname, '..', '.bin/coffee');
+        if (!fs.existsSync(pathToCoffee))
+          pathToCoffee = 'coffee'
+        const result = spawnSync(pathToCoffee, args, options);
+        const sterr = result.stderr.toString();
         if (sterr) {
-          reject(sterr.toString());
+          reject(sterr);
         }
 
         // zip
@@ -92,7 +91,7 @@ class ServerlessPlugin {
 
         output.on('close', () => {
           try {
-            //rimraf.sync(tmpCoffeeDirectory, { disableGlob: true });
+            rimraf.sync(tmpCoffeeDirectory, { disableGlob: true });
           } catch (err) {
             reject(err);
           }
