@@ -1,6 +1,6 @@
 # serverless-coffeescript
 
-A quick and dirty plugin for serverless to compile coffee-script files into javascript at deploy time. Shameless cribbed from https://github.com/serverless/serverless-babel-plugin.
+A quick and dirty plugin for the [Serverless Framework](https://serverless.com/) to compile coffee-script files into javascript at deploy time. Shamelessly cribbed from https://github.com/serverless/serverless-babel-plugin.
 
 ## Setup
 
