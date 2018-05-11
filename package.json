@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "plugin for serverless to compile coffee-script files into javascript",
   "main": "index.js",
+  "repository": "github:duanefields/serverless-coffeescript",
   "scripts": {
   },
   "author": "",
